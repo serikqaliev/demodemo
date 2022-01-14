@@ -1,0 +1,388 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Лента активности и событий</title>
+<basefont face="verdana" size="2">
+</head>
+<body style="">
+<font face="verdana" size="2">
+GASCOMPANY\Demo.user<br>
+<script type="text/javascript" src="../../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.cookie.js"></script>
+<script type="text/javascript">
+const S_NOT_SUPPORTED_IN_FULLSCREEN_MODE = "Недоступно в демо!";
+const S_NOT_SUPPORTED_WITHIN_MASTER_REPORT = "Недоступно в демо!";
+const S_DISPLAYMODE_MAX_DAY = "Масштабирование: по макс. результату дня";
+const S_DISPLAYMODE_MAX_ALL = "Масштабирование: по макс. результату за весь период";
+const S_DISPLAYMODE_MAX_ABS = "Масштабирование: по макс. возможному значению";
+var g_data = {"location_ids":"3","is_from_master":false,"days":[{"day_num":"","cats":[{"postfix":"сек","vis_type":"curve","color":"#808080","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,1963,2505,849,2220,209,1616,1837,1524,736,924,1458,16,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,850,1600,100,0,0,1800,1300,0,15,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,200,6,900,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#00b62d","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,38,1075,651,1706,0,917,1223,2153,1108,1199,36,0,0]},{"postfix":"символов","vis_type":"curve","color":"#f5dd00","report_id":232,"max_day":15420,"max_all":15420,"max_abs":15420,"hours":[0,0,0,0,0,0,0,0,0,0,1125,15,2281,528,349,53,8222,838,1807,15420,2368,0,0,0]},{"postfix":"страниц","vis_type":"block","color":"#0090ff","report_id":211,"max_day":20,"max_all":20,"max_abs":2,"hours":[0,0,0,0,0,0,0,0,0,0,5,0,4,0,8,0,0,0,0,0,0,0,0,0]},{"postfix":"файлов","vis_type":"block","color":"#b47bf7","report_id":215,"max_day":3,"max_all":6,"max_abs":6,"hours":[0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,2,0,1,1,0,0,3,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff3963","report_id":233,"max_day":3,"max_all":3,"max_abs":3,"hours":[0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff9800","report_id":234,"max_day":26,"max_all":30,"max_abs":30,"hours":[0,0,0,0,0,0,0,0,0,0,1,0,13,2,12,1,6,11,26,0,9,5,0,0]}]},{"day_num":"04.03.2019","cats":[{"postfix":"сек","vis_type":"curve","color":"#808080","report_id":232,"max_day":1721,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,332,1373,299,1156,1127,1672,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":1721,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":1721,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#00b62d","report_id":232,"max_day":1721,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,269,0,1721,1357,559,0,0,0,0,0,0]},{"postfix":"символов","vis_type":"curve","color":"#f5dd00","report_id":232,"max_day":1018,"max_all":15420,"max_abs":15420,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,1018,602,177,0,0,0,0,0,0]},{"postfix":"страниц","vis_type":"block","color":"#0090ff","report_id":211,"max_day":0,"max_all":2,"max_abs":2,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"файлов","vis_type":"block","color":"#b47bf7","report_id":215,"max_day":3,"max_all":6,"max_abs":6,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff3963","report_id":233,"max_day":2,"max_all":3,"max_abs":3,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff9800","report_id":234,"max_day":13,"max_all":30,"max_abs":30,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,6,13,10,0,0,0,0,0,0]}]},{"day_num":"05.03.2019","cats":[{"postfix":"сек","vis_type":"curve","color":"#808080","report_id":232,"max_day":2362,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,429,589,641,1374,714,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2362,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2362,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#00b62d","report_id":232,"max_day":2362,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,571,2362,1883,1110,2062,0,0,0,0]},{"postfix":"символов","vis_type":"curve","color":"#f5dd00","report_id":232,"max_day":5235,"max_all":15420,"max_abs":15420,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,393,1006,4154,5235,282,0,0,0,0]},{"postfix":"страниц","vis_type":"block","color":"#0090ff","report_id":211,"max_day":0,"max_all":2,"max_abs":2,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"файлов","vis_type":"block","color":"#b47bf7","report_id":215,"max_day":6,"max_all":6,"max_abs":6,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff3963","report_id":233,"max_day":0,"max_all":3,"max_abs":3,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff9800","report_id":234,"max_day":30,"max_all":30,"max_abs":30,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,30,16,16,17,0,0,0,0]}]},{"day_num":"06.03.2019","cats":[{"postfix":"сек","vis_type":"curve","color":"#808080","report_id":232,"max_day":2384,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,645,958,1052,299,498,450,403,69,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2384,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2384,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#00b62d","report_id":232,"max_day":2384,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,528,182,1819,0,505,2384,917,7,0,0,0,0,0]},{"postfix":"символов","vis_type":"curve","color":"#f5dd00","report_id":232,"max_day":2482,"max_all":15420,"max_abs":15420,"hours":[0,0,0,0,0,0,0,0,0,0,0,134,282,2482,0,257,408,651,0,0,0,0,0,0]},{"postfix":"страниц","vis_type":"block","color":"#0090ff","report_id":211,"max_day":2,"max_all":2,"max_abs":2,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0]},{"postfix":"файлов","vis_type":"block","color":"#b47bf7","report_id":215,"max_day":3,"max_all":6,"max_abs":6,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff3963","report_id":233,"max_day":1,"max_all":3,"max_abs":3,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff9800","report_id":234,"max_day":20,"max_all":30,"max_abs":30,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,3,10,0,6,20,9,0,0,0,0,0,0]}]},{"day_num":"07.03.2019","cats":[{"postfix":"сек","vis_type":"curve","color":"#808080","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,1963,2505,849,2220,209,1616,1837,1524,736,924,1458,16,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,62,0,15,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#ff3963","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,200,6,0,0,0,0,0,0,0]},{"postfix":"сек","vis_type":"curve","color":"#00b62d","report_id":232,"max_day":2505,"max_all":2505,"max_abs":3600,"hours":[0,0,0,0,0,0,0,0,0,0,0,38,1075,651,1706,0,917,1223,2153,1108,1199,36,0,0]},{"postfix":"символов","vis_type":"curve","color":"#f5dd00","report_id":232,"max_day":15420,"max_all":15420,"max_abs":15420,"hours":[0,0,0,0,0,0,0,0,0,0,1125,15,2281,528,349,53,8222,838,1807,15420,2368,0,0,0]},{"postfix":"страниц","vis_type":"block","color":"#0090ff","report_id":211,"max_day":0,"max_all":2,"max_abs":2,"hours":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"файлов","vis_type":"block","color":"#b47bf7","report_id":215,"max_day":3,"max_all":6,"max_abs":6,"hours":[0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,2,0,1,1,0,0,3,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff3963","report_id":233,"max_day":3,"max_all":3,"max_abs":3,"hours":[0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0]},{"postfix":"событий","vis_type":"block","color":"#ff9800","report_id":234,"max_day":26,"max_all":30,"max_abs":30,"hours":[0,0,0,0,0,0,0,0,0,0,1,0,13,2,12,1,6,11,26,0,9,5,0,0]}]}]};
+
+
+USE_HIGHLIGHT = true; // false
+HIGHLIGHT_COLOR_BG = 'rgba(250,240,220,0.4)';
+HIGHLIGHT_COLOR_FG = 'rgba(180,180,180,0.5)';
+LOWER_LEVEL_COLOR = '#fdeff0';
+MAX_HEIGHT_USAGE = 0.95;
+GRADIENT_HEIGHT = 1.1;
+
+DISPLAYMODE_FIRST = 0;
+DISPLAYMODE_MAX_DAY = 0;  // maximum value for category we got on day-result base
+DISPLAYMODE_MAX_ALL = 1;  // maximum value for category we got on all days-result base
+DISPLAYMODE_MAX_ABS = 2;  // maximum value for category we got on maximum allowed value base
+DISPLAYMODE_LAST = 2;
+
+var g_dm = GetDisplayMode();
+
+
+function GetDrawCtx(cnv)
+{
+  return cnv.getContext('2d');
+}
+
+
+function f2i(f)
+{
+  return Math.floor(f);
+}
+
+
+function GetHourByOffsetX(x)
+{
+  var h = f2i(Math.max(x,0)/dhlp.hourw);
+  h = Math.min(h,23);
+  return h;
+}
+
+
+function OnClick(cnv,hour)
+{
+  if ( !g_data.is_from_master )
+     {
+       try { 
+        top.GenReportInNewWindow(cnv.myCat.report_id,g_data.location_ids,cnv.myDay.day_num,cnv.myDay.day_num,0,24); 
+       } catch (e) 
+       { 
+         alert(S_NOT_SUPPORTED_IN_FULLSCREEN_MODE);
+       }
+     }
+  else
+     {
+       alert(S_NOT_SUPPORTED_WITHIN_MASTER_REPORT);
+     }
+}
+
+
+function ShowTooltip(page_x,page_y,cnv,hour)
+{
+  var tt = $('#tooltip');
+  tt.html(cnv.myDay.day_num+' '+hour+':xx<br><b>'+cnv.myCat.hours[hour]+'</b> '+cnv.myCat.postfix);
+  tt.offset({top:page_y,left:page_x+30});
+  tt.css('visibility','visible');
+}
+
+
+function HideTooltip()
+{
+  var tt = $('#tooltip');
+  tt.css('visibility','hidden');
+}
+
+
+function OnMouseMove(cnv,hour,page_x,page_y)
+{
+  if ( USE_HIGHLIGHT )
+     {
+       var draw = GetDrawCtx(dhlp.bgcnv);
+
+       DrawCanvas(cnv,draw);
+       
+       draw.fillStyle = HIGHLIGHT_COLOR_BG;
+       draw.fillRect(0,0,cnv.width,cnv.height);
+
+       var x = hour*dhlp.hourw;
+       var y = 0;
+       var w = dhlp.hourw;
+       var h = dhlp.height;
+
+       draw.strokeStyle = HIGHLIGHT_COLOR_FG;
+       draw.strokeRect(x,y,w,h);
+       
+       GetDrawCtx(cnv).putImageData(draw.getImageData(0,0,cnv.width,cnv.height),0,0);
+     }
+
+  ShowTooltip(page_x,page_y,cnv,hour);
+}
+
+
+function OnMouseOut(cnv)
+{
+  if ( USE_HIGHLIGHT )
+     {
+       DrawCanvas(cnv);
+     }
+
+  HideTooltip();
+}
+
+
+// this is not always true if we have gaps between days
+function GetHourValue(day_idx,cat_idx,hour,offset)
+{
+  var result = 0;
+  
+  var needed_hour = day_idx*24+hour+offset;
+  if ( needed_hour >= 0 && needed_hour < g_data.days.length*24 )
+     {
+       var needed_day = f2i(needed_hour/24);
+       needed_hour = needed_hour%24;
+
+       result = g_data.days[needed_day].cats[cat_idx].hours[needed_hour];
+     }
+
+  return result;
+}
+
+
+function BuildHelperObject(cnv)
+{
+  if ( typeof(dhlp) == 'undefined' )
+     {
+       dhlp = new Object();
+
+       dhlp.hourw = f2i(cnv.width/24);
+       dhlp.width = dhlp.hourw*24;
+       dhlp.height = cnv.height;
+
+       if ( USE_HIGHLIGHT )
+          {
+            dhlp.bgcnv = document.createElement('CANVAS');
+            dhlp.bgcnv.width = cnv.width;
+            dhlp.bgcnv.height = cnv.height;
+          }
+
+       dhlp.coeff = new Array();
+
+       for ( var x = 0; x < dhlp.hourw; x++ )
+           {
+             var p = x/dhlp.hourw;
+
+             dhlp.coeff[x] = new Object();
+             dhlp.coeff[x].k_1 = -(p*(p-1)*(p-2)/6);
+             dhlp.coeff[x].k0 = +((p*p-1)*(p-2)/2);
+             dhlp.coeff[x].k1 = -(p*(p+1)*(p-2)/2);
+             dhlp.coeff[x].k2 = +(p*(p*p-1)/6);
+           }
+     }
+}
+
+
+function InitCanvas(abs_idx,cnv)
+{
+  var num_cats = g_data.days[0].cats.length;
+  
+  var day_idx = f2i(abs_idx / num_cats);
+  var cat_idx = abs_idx % num_cats;
+
+  var day_obj = g_data.days[day_idx];
+  var cat_obj = day_obj.cats[cat_idx];
+
+  cnv.myCat = cat_obj;
+  cnv.myDay = day_obj;
+  cnv.myCatIdx = cat_idx;
+  cnv.myDayIdx = day_idx;
+
+  BuildHelperObject(cnv);
+}
+
+
+function DrawCanvas(cnv,draw_to)
+{
+  var cat_obj = cnv.myCat;
+  var day_obj = cnv.myDay;
+  var cat_idx = cnv.myCatIdx;
+  var day_idx = cnv.myDayIdx;
+  
+  var draw = (draw_to ? draw_to : GetDrawCtx(cnv));
+
+  draw.clearRect(0,0,cnv.width,cnv.height);
+
+  var lineargradient = draw.createLinearGradient(0,0,0,f2i(dhlp.height*GRADIENT_HEIGHT));
+  lineargradient.addColorStop(0,cat_obj.color);
+  lineargradient.addColorStop(1,LOWER_LEVEL_COLOR);
+  draw.fillStyle = lineargradient;
+
+  var max_value = (g_dm == DISPLAYMODE_MAX_DAY ? cat_obj.max_day : (g_dm == DISPLAYMODE_MAX_ALL ? cat_obj.max_all : cat_obj.max_abs));
+
+  if ( max_value > 0 )
+     {
+       if ( cat_obj.vis_type == 'curve' )
+          {
+            draw.beginPath();
+            draw.moveTo(0,dhlp.height);
+
+            var y_scale = 1.0/max_value*MAX_HEIGHT_USAGE*dhlp.height;
+                        
+            for ( var hour = 0; hour < 24; hour++ )
+                {
+                  var y_2 = GetHourValue(day_idx,cat_idx,hour,-2);
+                  var y_1 = GetHourValue(day_idx,cat_idx,hour,-1);
+                  var y0  = GetHourValue(day_idx,cat_idx,hour,0);
+                  var y1  = GetHourValue(day_idx,cat_idx,hour,+1);
+                  var y2  = GetHourValue(day_idx,cat_idx,hour,+2);
+
+                  var half = f2i(dhlp.hourw/2);
+                  
+                  for ( var x = 0; x < half; x++ )
+                      {
+                        var c = dhlp.coeff[x+half];
+                        var app_y = c.k_1*y_2 + c.k0*y_1 + c.k1*y0 + c.k2*y1;
+                        app_y = Math.min(app_y,max_value);
+                        var y = dhlp.height-app_y*y_scale;
+                        draw.lineTo(hour*dhlp.hourw+x,Math.floor(y));
+                      }
+
+                  for ( var x = half; x < dhlp.hourw; x++ )
+                      {
+                        var c = dhlp.coeff[x-half];
+                        var app_y = c.k_1*y_1 + c.k0*y0 + c.k1*y1 + c.k2*y2;
+                        app_y = Math.min(app_y,max_value);
+                        var y = dhlp.height-app_y*y_scale;
+                        draw.lineTo(hour*dhlp.hourw+x,Math.floor(y));
+                      }
+                }
+                      
+            draw.lineTo(dhlp.width-1,dhlp.height);
+            draw.lineTo(0,dhlp.height);
+            draw.fill();
+          }
+       else
+          {
+            for ( var hour = 0; hour < 24; hour++ )
+                {
+                  var v = GetHourValue(day_idx,cat_idx,hour,0);
+                  if ( v > 0 )
+                     {
+                       var w = f2i(v/max_value*dhlp.hourw);
+                       w = Math.max(w,3);
+                       w = Math.min(w,dhlp.hourw);
+                       var h = f2i(MAX_HEIGHT_USAGE*dhlp.height);
+                       var x = f2i(hour*dhlp.hourw+(dhlp.hourw-w)/2);
+                       draw.fillRect(x,dhlp.height-h,w,h);
+                     }
+                }
+          }
+     }
+}
+
+
+function Redraw()
+{
+  $("canvas").each(function(idx){ DrawCanvas(this); });
+}
+
+
+function GetDisplayMode()
+{
+  var s = $.cookie("timelinedisplaymode");
+
+  if ( s == "0" )
+     {
+       return DISPLAYMODE_MAX_DAY;
+     }
+  else
+  if ( s == "1" )
+     {
+       return DISPLAYMODE_MAX_ALL;
+     }
+  else
+  if ( s == "2" )
+     {
+       return DISPLAYMODE_MAX_ABS;
+     }
+  else
+     {
+       return DISPLAYMODE_MAX_DAY;  // default
+     }
+}
+
+
+function ModeTogglerSetCaption()
+{ 
+  var s = "";
+  
+  if ( g_dm == DISPLAYMODE_MAX_DAY )
+     {
+       s = S_DISPLAYMODE_MAX_DAY;
+     }
+  else
+  if ( g_dm == DISPLAYMODE_MAX_ALL )
+     {
+       s = S_DISPLAYMODE_MAX_ALL;
+     }
+  else
+  if ( g_dm == DISPLAYMODE_MAX_ABS )
+     {
+       s = S_DISPLAYMODE_MAX_ABS;
+     }
+  
+  $("#togglemode").text(s);
+}
+
+
+function ToggleMode()
+{
+  g_dm++;
+  g_dm = (g_dm > DISPLAYMODE_LAST ? DISPLAYMODE_FIRST : g_dm);
+  $.cookie("timelinedisplaymode",g_dm,{expires:365,path:"/"});
+  ModeTogglerSetCaption();
+  Redraw();
+}
+
+
+function Init()
+{
+  if ( g_data && g_data.days && g_data.days.length > 0 )  // paranoja
+     {
+       ModeTogglerSetCaption();
+       
+       var coll = $("canvas");
+       coll.each(function(idx){ InitCanvas(idx,this); });
+       Redraw();
+       coll.click(function(ev) { OnClick(ev.currentTarget,GetHourByOffsetX(ev.offsetX)); });
+       // we do not set mouseover event because of IE buggy
+       coll.mousemove(function(ev) { OnMouseMove(ev.currentTarget,GetHourByOffsetX(ev.offsetX),ev.pageX,ev.pageY); });
+       coll.mouseout(function(ev) { OnMouseOut(ev.currentTarget); });
+     }
+
+  if ( navigator.userAgent.indexOf('pdfcreator') != -1 )
+     {
+       window.print();  // signal for pdfgen: we are ready!
+     }
+}
+
+$(document).ready(function() { Init(); });
+
+
+
+</script>
+<style type="text/css"> h1 { color:#606060; font-size:24px; } table { border:0; border-collapse:collapse; } td { border:solid 1px #F4E4D9; padding:3px; font-size:12px; } td.header { background:#FFF0F0; font-weight:bold; text-align:center; vertical-align:middle; } td.user { background:#FEFFF1; text-align:left; vertical-align:top; } #tooltip {position:absolute;z-index:100;visibility:hidden;width:180px;border:3px solid #c0c0c0;border-radius:6px;background-color:rgba(240,240,230,0.8);box-shadow:4px 4px 10px 0px #808080;padding:10px;} canvas {border:0;margin:0;cursor:pointer;} div.date {display:inline-block;padding:7px 30px 7px 30px;border-radius:8px;background:#F4F4F4;font-weight:bold;} </style>
+<div id="tooltip" style="top: 421px; left: 641px; visibility: visible;">6:xx<br><b>0</b> символов</div>
+
+<table>
+<tbody><tr><td colspan="26" align="center" style="border:0;"><div class="date">СРЕДНИЕ ЗНАЧЕНИЯ ЗА ПЕРИОД</div></td></tr>
+<tr><td style="border:0;"></td><td class="header" style="font-weight:normal;">00</td><td class="header" style="font-weight:normal;">01</td><td class="header" style="font-weight:normal;">02</td><td class="header" style="font-weight:normal;">03</td><td class="header" style="font-weight:normal;">04</td><td class="header" style="font-weight:normal;">05</td><td class="header" style="font-weight:normal;">06</td><td class="header" style="font-weight:normal;">07</td><td class="header" style="font-weight:normal;">08</td><td class="header" style="font-weight:normal;">09</td><td class="header" style="font-weight:normal;">10</td><td class="header" style="font-weight:normal;">11</td><td class="header" style="font-weight:normal;">12</td><td class="header" style="font-weight:normal;">13</td><td class="header" style="font-weight:normal;">14</td><td class="header" style="font-weight:normal;">15</td><td class="header" style="font-weight:normal;">16</td><td class="header" style="font-weight:normal;">17</td><td class="header" style="font-weight:normal;">18</td><td class="header" style="font-weight:normal;">19</td><td class="header" style="font-weight:normal;">20</td><td class="header" style="font-weight:normal;">21</td><td class="header" style="font-weight:normal;">22</td><td class="header" style="font-weight:normal;">23</td><td class="header">Всего</td></tr>
+<tr><td nowrap="" class="header">Прочее</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>4ч25м</b></td></tr>
+<tr><td nowrap="" class="header">Социальные сети</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>1ч02м</b></td></tr>
+<tr><td nowrap="" class="header">СМИ блоги<br>развлечения</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>0ч44м</b></td></tr>
+<tr><td nowrap="" class="header">Рабочие</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>2ч49м</b></td></tr>
+<tr><td nowrap="" class="header">Работа с текстом</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>32.2<br>тыс.симв.</b></td></tr>
+<tr><td nowrap="" class="header">Напечатано страниц</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>4</b></td></tr>
+<tr><td nowrap="" class="header">Отправлено +<br>выведено файлов</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>9</b></td></tr>
+<tr><td nowrap="" class="header">Высокоприоритетные<br>события</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>3</b></td></tr>
+<tr><td nowrap="" class="header">Низкоприоритетные<br>события</td><td colspan="24" style="padding:0;"><canvas width="912" height="55">your web-browser is too old</canvas></td><td nowrap="" align="center"><b>86</b></td></tr>
+</tbody></table>
+<br>
+<br>
+<br>
+</font>
+
+</body></html>

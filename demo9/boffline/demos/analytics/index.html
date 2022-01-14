@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Аналитика</title>
+<script>
+
+REPORT_CONSREPORT      = 206;
+REPORT_SIMPLECONS      = 241;
+REPORT_TIMELINE        = 231;
+REPORT_TIMELINESUMM    = 246;
+
+CAT_WORKDAYS_INCL_HOLIDAYS    = -118;
+CAT_WORKDAYS_EXCL_HOLIDAYS    = -117;
+CAT_PROGULS                   = -116;
+CAT_NEDORABOTKI               = -115;     
+CAT_PERERABOTKI               = -114;     
+CAT_APPOINTMENTS              = -113;     
+CAT_PAUSES                    = -112;     
+CAT_TOTALTIME                 = -111;     
+CAT_ACTIVETIME                = -110;     
+CAT_APPTIME                   = -109;     
+CAT_INETTIME                  = -108;     
+CAT_ACT_USEFUL                = -107;     
+CAT_ACT_HARMFUL               = -106;     
+CAT_TEXT                      = +100001;  
+CAT_MAILS                     = +100002;  
+CAT_MSGS                      = +100003;  
+CAT_PRINTS                    = +100004;  
+CAT_FILES                     = +100005;  
+CAT_EVENTS_HP                 = +100006;  
+CAT_EVENTS_LP                 = +100007;
+
+</script>
+<script src="gen_analytics.lang.js"></script>
+<script src="report_data.js"></script>
+<script defer src="gen_analytics.bundle.js"></script>
+<link href="gen_analytics.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54375084-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-54375084-1');
+</script>
+<!-- end of Global site tag -->
+
+<script type="text/javascript">
+var var_bitrix_1 = "https://stakhanovets.ru/demo9/boffline/demos/analytics/"; var var_bitrix_2 = ""; var var_bitrix_3 = ""; var var_bitrix_4 = ""; var var_bitrix_5 = ""; var var_bitrix_6 = ""; var var_bitrix_7 = ""; var var_bitrix_8 = "";
+</script>
+<script data-skip-moving="true">
+(function(w,d,u,b){ s=d.createElement('script');r=1*new Date();s.async=1;s.src=u+'?'+r; h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://crm.stakhanovets.ru/upload/crm/site_button/loader_2_xpvvjb.js'); window.Bitrix24WidgetObject = window.Bitrix24WidgetObject || {}; window.Bitrix24WidgetObject.handlers = { 'form-init': function(form){ form.presets = { 'crm_param_1':var_bitrix_1,'crm_param_2':var_bitrix_2,'crm_param_3':var_bitrix_3,'crm_param_4':var_bitrix_4,'crm_param_5':var_bitrix_5,'crm_param_6':var_bitrix_6,'crm_param_7':var_bitrix_7,'crm_param_8':var_bitrix_8 }; } };
+</script>
+
+<div id="root" style="z-index:1"></div>
+</body>
+</html>

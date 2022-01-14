@@ -1,0 +1,135 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Сводный упрощенный отчет</title>
+<basefont face="verdana" size="1">
+</head>
+<body>
+<font face="verdana" size="1">
+<script type="text/javascript">
+
+function OnClick(is_from_master,report_id,location_ids)
+{
+  if ( !is_from_master )
+     {
+       try { 
+        top.GenReportInNewWindow(report_id,location_ids); 
+       } catch (e) 
+       { 
+         alert(S_NOT_SUPPORTED_IN_FULLSCREEN_MODE);
+       }
+     }
+  else
+     {
+       alert(S_NOT_SUPPORTED_WITHIN_MASTER_REPORT);
+     }
+}
+
+
+function DetailsClick(id)
+{
+  event.target.style.display = 'none';
+  document.getElementById(id).style.display = '';
+}
+
+
+</script>
+<script type="text/javascript">
+const S_NOT_SUPPORTED_IN_FULLSCREEN_MODE = "Недоступно в демо!";
+const S_NOT_SUPPORTED_WITHIN_MASTER_REPORT = "Недоступно в демо!";
+</script>
+<style type="text/css"> h1 { color:#606060; font-size:24px; } table { border:0; border-collapse:collapse; } td { border:solid 1px #F4E4D9; padding:3px; font-size:12px; } td.header { background:#FFF0F0; font-weight:bold; text-align:center; vertical-align:middle; } td.user { background:#FEFFF1; text-align:left; vertical-align:top; }  </style>
+<style type="text/css">@media print { body { padding:0; margin:0; zoom:0.75; } }</style>
+<table>
+<tbody><tr><td colspan="5" style="border:0; height:30px;"></td></tr>
+<tr><td class="header">Пользователь</td><td class="header">Дисциплина</td><td class="header">Время на работе</td><td class="header" colspan="2">Активность</td><td class="header">Популярные</td></tr>
+<tr><td nowrap="" class="user" rowspan="5">GASCOMPANY\Demo.user<br><br><br>Отдел: По умолчанию<br>Профиль: По умолчанию</td><td nowrap="" align="center" valign="middle" rowspan="5"><b>прогулов: 1</b><br><br>усредненный приход ранее на 0ч08м<br><b>опозданий: 12</b><br><br>усредненный уход позднее на 0ч19м<br><b>ранних уходов: 3</b><br><br></td><td nowrap="" align="center" valign="middle" rowspan="5"><a href="javascript:;" onclick="OnClick(false,204,&#39;5&#39;)"><font color="#808080"><b>92%</b></font></a><br><font color="#808080">173ч53м<br>21 дней (вкл. выходные)<br>20 дней (искл. выходные)</font></td><td nowrap="" align="center" valign="middle" colspan="2"><br><span style="float:left;font-weight:bold;color:#ff3963;">Вредные (17ч11м):</span><span style="float:right;display:block;border-radius:4px 0 0 4px;margin-left:5px;width:29px;height:20px;border:1px solid #404040;background:#ff3963;"></span><div style="clear:both;height:2px;"></div>
+<span style="float:left;font-weight:bold;color:#00b62d;">Полезные (32ч04м):</span><span style="float:right;display:block;border-radius:4px 0 0 4px;margin-left:5px;width:56px;height:20px;border:1px solid #404040;background:#00b62d;"></span><div style="clear:both;height:2px;"></div>
+<span style="float:left;font-weight:bold;color:#808080;">Прочие (65ч16м):</span><span style="float:right;display:block;border-radius:4px 0 0 4px;margin-left:5px;width:114px;height:20px;border:1px solid #404040;background:#808080;"></span><div style="clear:both;height:2px;"></div>
+<br></td><td nowrap="" align="left" valign="top" rowspan="5"><span style="color:#00b62d;">"Microsoft Excel" (11%, 15ч13м)</span><br>
+<span style="color:#808080;">"Skype" (8%, 10ч10м)</span><br>
+<span style="color:#808080;">"TeamViewer" (7%, 9ч25м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://docs.google.com/">docs.google.com</a> (7%, 8ч57м)</span><br>
+<span style="color:#ff3963;">"Diablo II: Resurrected" (7%, 8ч43м)</span><br>
+<span style="color:#ff3963;">"Telegram Desktop" (5%, 6ч27м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://translate.google.com/">translate.google.com</a> (5%, 6ч24м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://e.mail.ru/">e.mail.ru</a> (5%, 5ч51м)</span><br>
+<span style="color:#00b62d;">"Microsoft Word" (4%, 4ч55м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://localhost/">localhost</a> (3%, 3ч12м)</span><br>
+<span style="color:#00b62d;">"Блокнот" (3%, 2ч55м)</span><br>
+<span style="color:#00b62d;">"Microsoft Outlook" (2%, 2ч18м)</span><br>
+<span style="color:#00b62d;">"Проводник" (2%, 1ч59м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://youtube.com/">habr.com</a> (2%, 1ч49м)</span><br>
+<span style="color:#808080;">"Zoom Meetings" (2%, 1ч46м)</span><br>
+<span style="color:#808080;">"Adobe Photoshop CC 2019" (2%, 1ч45м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://yandex.ru/">yandex.ru</a> (1%, 1ч21м)</span><br>
+<span style="color:#00b62d;"><a target="_blank" style="color:inherit;" href="http://crm.stakhanovets.ru/">crm.gascompany.net</a> (1%, 1ч18м)</span><br>
+<span style="color:#808080;">"Adobe Acrobat" (1%, 1ч02м)</span><br>
+<span style="color:#808080;">"Application Frame Host" (1%, 1ч02м)</span><br>
+</td></tr>
+<tr><td class="header" style="height:1px;">Время в программах</td><td class="header" style="height:1px;">Время в интернете</td></tr>
+<tr><td nowrap="" align="center" valign="middle"><a href="javascript:;" onclick="OnClick(false,201,&#39;5&#39;)"><font color="red"><b>42%</b></font></a><br><font size="-1" color="#808080">72ч52м</font></td><td nowrap="" align="center" valign="middle"><a href="javascript:;" onclick="OnClick(false,202,&#39;5&#39;)"><font color="red"><b>24%</b></font></a><br><font size="-1" color="#808080">41ч38м</font></td></tr>
+<tr><td class="header" style="height:1px;" colspan="2">Суммарное</td></tr>
+<tr><td align="center" valign="middle" colspan="2"><a href="javascript:;" onclick="OnClick(false,232,&#39;5&#39;)"><font color="red"><b>66%</b></font></a><br><font size="-1" color="#808080">114ч31м</font></td></tr>
+<tr><td align="center" colspan="6" style="padding:0;"><a href="javascript:;" onclick="DetailsClick(&#39;table0&#39;)"><img src="expand.png"></a><table style="display:none;" id="table0">
+<tbody><tr><td align="center" style="font-weight:bold;border:0;">Вредные</td><td align="center" style="font-weight:bold;border:0;">Полезные</td><td align="center" style="font-weight:bold;border:0;">Прочие</td></tr>
+<tr><td nowrap="" valign="top" align="left" style="border:0;">
+<span style="color:#ff3963;">"Diablo II: Resurrected" (7%, 8ч43м)</span><br>
+<span style="color:#ff3963;">"Telegram Desktop" (5%, 6ч27м)</span><br>
+<span style="color:#ff3963;">"Imo Desktop" (1%, 0ч47м)</span><br>
+<span style="color:#ff3963;">"Viber" (1%, 0ч31м)</span><br>
+<span style="color:#ff3963;">"WhatsApp" (1%, 0ч11м)</span><br>
+<span style="color:#ff3963;"><a target="_blank" style="color:inherit;" href="http://instagram.com/">instagram.com</a> (1%, 0ч09м)</span><br>
+<span style="color:#ff3963;"><a target="_blank" style="color:inherit;" href="http://music.yandex.ru/">music.yandex.ru</a> (1%, 0ч09м)</span><br>
+<span style="color:#ff3963;"><a target="_blank" style="color:inherit;" href="http://tiktok.com/">tiktok.com</a> (1%, 0ч06м)</span><br>
+<span style="color:#ff3963;"><a target="_blank" style="color:inherit;" href="http://news.mail.ru/">news.mail.ru</a> (1%, 0ч05м)</span><br>
+<span style="color:#ff3963;"><a target="_blank" style="color:inherit;" href="http://pikabu.ru/">pikabu.ru</a> (1%, 0ч02м)</span><br>
+</td>
+<td nowrap="" valign="top" align="left" style="border:0;">
+<span style="color:#00b62d;">"Microsoft Excel" (11%, 15ч13м)</span><br>
+<span style="color:#00b62d;">"Microsoft Word" (4%, 4ч55м)</span><br>
+<span style="color:#00b62d;">"Блокнот" (3%, 2ч55м)</span><br>
+<span style="color:#00b62d;">"Microsoft Outlook" (2%, 2ч18м)</span><br>
+<span style="color:#00b62d;">"Проводник" (2%, 1ч59м)</span><br>
+<span style="color:#00b62d;"><a target="_blank" style="color:inherit;" href="http://crm.gascompany.net/">crm.gascompany.net</a> (1%, 1ч18м)</span><br>
+<span style="color:#00b62d;">"Microsoft PowerPoint" (1%, 0ч59м)</span><br>
+<span style="color:#00b62d;"><a target="_blank" style="color:inherit;" href="http://vimbox.skyeng.ru/">vimbox.skyeng.ru</a> (1%, 0ч55м)</span><br>
+<span style="color:#00b62d;"><a target="_blank" style="color:inherit;" href="http://business.skyeng.ru/">business.skyeng.ru</a> (1%, 0ч40м)</span><br>
+<span style="color:#00b62d;">"Skype for Business" (1%, 0ч32м)</span><br>
+<span style="color:#00b62d;">"WinRAR archiver" (1%, 0ч12м)</span><br>
+<span style="color:#00b62d;"><a target="_blank" style="color:inherit;" href="http://moex.com/">moex.com</a> (1%, 0ч06м)</span><br>
+</td><td nowrap="" valign="top" align="left" style="border:0;">
+<span style="color:#808080;">"Skype" (8%, 10ч10м)</span><br>
+<span style="color:#808080;">"TeamViewer" (7%, 9ч25м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://docs.google.com/">docs.google.com</a> (7%, 8ч57м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://translate.google.com/">translate.google.com</a> (5%, 6ч24м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://e.mail.ru/">e.mail.ru</a> (5%, 5ч51м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://localhost/">localhost</a> (3%, 3ч12м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://youtube.com/">habr.com</a> (2%, 1ч49м)</span><br>
+<span style="color:#808080;">"Zoom Meetings" (2%, 1ч46м)</span><br>
+<span style="color:#808080;">"Adobe Photoshop CC 2019" (2%, 1ч45м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://yandex.ru/">yandex.ru</a> (1%, 1ч21м)</span><br>
+<span style="color:#808080;">"Adobe Acrobat" (1%, 1ч02м)</span><br>
+<span style="color:#808080;">"Application Frame Host" (1%, 1ч02м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://rosrid.ru/">rosrid.ru</a> (1%, 0ч59м)</span><br>
+<span style="color:#808080;">"Notepad++ : a free (GPL) source code editor" (1%, 0ч58м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://experts.yandex/">experts.yandex</a> (1%, 0ч58м)</span><br>
+<span style="color:#808080;">"Windows Shell Experience Host" (1%, 0ч57м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://online.fasie.ru/">online.fasie.ru</a> (1%, 0ч57м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://ru.wikipedia.org/">ru.wikipedia.org</a> (1%, 0ч55м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://fips.ru/">fips.ru</a> (1%, 0ч54м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://lk.mango-office.ru/">lk.mango-office.ru</a> (1%, 0ч51м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://habr.com/">habr.com</a> (1%, 0ч47м)</span><br>
+<span style="color:#808080;">"Ножницы" (1%, 0ч46м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://mail.ru/">mail.ru</a> (1%, 0ч45м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://4pda.to/">4pda.to</a> (1%, 0ч44м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://rospatent.gov.ru/">rospatent.gov.ru</a> (1%, 0ч44м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://jsonviewer.stack.hu/">jsonviewer.stack.hu</a> (1%, 0ч42м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://msn.com/">msn.com</a> (1%, 0ч20м)</span><br>
+<span style="color:#808080;"><a target="_blank" style="color:inherit;" href="http://trade-gold.ru/">trade-gold.ru</a> (1%, 0ч13м)</span><br>
+</td></tr>
+</tbody></table></td></tr>
+</tbody></table>
+<br><br>
+</font>
+
+</body></html>
